@@ -19,7 +19,7 @@
 
 body {
   font-family: var(--font-family);
-  background-color: var(--primary-color);
+  
 }
 
 /* Header Styles */
@@ -82,7 +82,7 @@ main {
   text-align: center;
   overflow: auto;
   box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.9), 0 0 10px rgba(0, 0, 0, 0.9);
-  background-color: transparent;
+  background-color: var(--primary-color);
   border-radius: 10px;
   scrollbar-width: none;
   padding: 1%;
