@@ -100,3 +100,11 @@ footer {
   color: var(--accent-color);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  main {
+    flex-direction: column;
+    width: 95%;
+  }
+}
