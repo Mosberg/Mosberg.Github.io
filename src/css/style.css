@@ -6,8 +6,6 @@
   --accent-color: #e74c3c;
   --background-color: #f7f7f7;
   --border-color: #ddd;
-  --content-background-color: #ecf0f1;
-  --category-background-color: #87ceeb;
 }
 
 /* Reset and Base Styles */
@@ -19,7 +17,7 @@
 
 body {
   font-family: var(--font-family);
-  
+  background-color: var(--primary-color);
 }
 
 /* Header Styles */
@@ -82,7 +80,7 @@ main {
   text-align: center;
   overflow: auto;
   box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.9), 0 0 10px rgba(0, 0, 0, 0.9);
-  background-color: var(--primary-color);
+  background-color: var(--background-color);
   border-radius: 10px;
   scrollbar-width: none;
   padding: 1%;
@@ -99,7 +97,6 @@ footer {
   align-items: center;
   justify-content: center;
   color: var(--accent-color);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   background-color: transparent;
 }
 
