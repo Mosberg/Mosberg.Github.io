@@ -70,7 +70,7 @@ nav a:hover {
 main {
   position: fixed;
   inset-block-start: 100px;
-  inset-inline-start: 1%;
+  inset-inline-start: 2%;
   inline-size: 96%;
   inset-block-end: 40px;
   display: flex;
