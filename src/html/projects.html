@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta Information -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="My Github.io Page - Projects." />
+    <meta name="author" content="Mosberg" />
+
+    <title>Mosberg.Github.io - Projects</title>
+
+    <!-- Favicon -->
+    <link
+      rel="shortcut icon"
+      href="https://raw.githubusercontent.com/Mosberg/Mosberg.Github.io/refs/heads/main/src/ico/favicon.ico"
+      type="image/x-icon"
+    />
+
+    <!-- Lazy-load fonts -->
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css?family=Fira+Code|Sofia&effect=neon|outline|emboss|shadow-multiple"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css?family=Fira+Code|Sofia&effect=neon|outline|emboss|shadow-multiple"
+        rel="stylesheet"
+      />
+    </noscript>
+
+    <!-- Stylesheet -->
+    <link href="https://mosberg.github.io/src/css/style.css" rel="stylesheet" />
+
+    <!-- Script (deferred for performance) -->
+    <script src="https://mosberg.github.io/src/js/script.js" defer></script>
+  </head>
+
+  <body>
+    <header>
+      <h1 class="font-effect-emboss">Mosberg.Github.io</h1>
+    </header>
+
+    <nav aria-label="Main Navigation">
+      <a id="home_btn" href="https://mosberg.github.io/">Home</a>
+    </nav>
+
+    <main class="loadContent" role="main">
+      <!-- Dynamic content will be loaded here -->
+    </main>
+
+    <footer>
+      <p class="font-effect-emboss">
+        &copy; <span id="year"></span> Mosberg. All rights reserved.
+      </p>
+    </footer>
+
+    <script>
+      // Automatically update copyright year
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
