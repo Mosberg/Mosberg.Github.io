@@ -32,6 +32,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: transparent;
 }
 
 /* Navigation Styles */
@@ -99,6 +100,7 @@ footer {
   justify-content: center;
   color: var(--accent-color);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  background-color: transparent;
 }
 
 /* Responsive Design */
