@@ -82,7 +82,7 @@ main {
   text-align: center;
   overflow: auto;
   box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.9), 0 0 10px rgba(0, 0, 0, 0.9);
-  background-color: var(--background-color);
+  background-color: transparent;
   border-radius: 10px;
   scrollbar-width: none;
   padding: 1%;
