@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+
+<!-- Language of web page-->
+<html lang="en">
+  <head>
+    <!-- Define the character set used -->
+    <meta charset="UTF-8" />
+
+    <!-- Define the viewport for responsive design (Make your website look good on all devices)-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Define a description of your web page -->
+    <meta name="description" content="Perchance HTML5 Template" />
+
+    <!-- Define keywords for search engines -->
+    <meta name="keywords" content="HTML5, Template, Perchance" />
+
+    <!-- Define the author of the web page -->
+    <meta name="author" content="Mosberg" />
+
+    <!-- Browser's Title Bar -->
+    <title>Perchance HTML5 Template</title>
+
+    <!-- External Resource (Favicon) -->
+    <link
+      rel="shortcut icon"
+      href="https://raw.githubusercontent.com/Mosberg/perchance/refs/heads/main/images/mosberg-avatar-ico.ico"
+      type="image/x-icon"
+    />
+
+    <!-- External Resource (Lazy-load Fonts) -->
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css?family=Fira+Code"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript>
+      <link
+        href="https://fonts.googleapis.com/css?family=Fira+Code"
+        rel="stylesheet"
+      />
+    </noscript>
+
+    <!-- External Resource (CSS Stylesheet) -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://raw.githubusercontent.com/Mosberg/perchance/refs/heads/main/styles.css"
+    />
+
+    <!-- Internal Resource (CSS Styles) -->
+    <style>
+      /* Add any additional internal CSS styles here */
+
+      @import url("https://raw.githubusercontent.com/Mosberg/perchance/refs/heads/main/styles.css");
+
+      :root {
+        font-family: "Fira Code", monospace;
+        box-sizing: border-box;
+
+        --primary-color: #4caf50;
+        --secondary-color: #ff9800;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header (Title & Description) -->
+    <header id="header">
+      <!-- Title -->
+      <h1>Perchance HTML5 Template</h1>
+
+      <!-- Description -->
+      <p>Description Goes Here</p>
+    </header>
+
+    <!-- Nav (Navigation Controls) -->
+    <nav id="navigation"></nav>
+
+    <!-- Main (Main Content) -->
+    <main id="mainContent">
+      <!-- All Main Content Goes Here -->
+    </main>
+
+    <!-- Section (Section Content) -->
+    <section id="sectionContent">
+      <!-- All Section Content Goes Here -->
+    </section>
+
+    <!-- Footer (Copyright & Script to automatically update year) -->
+    <footer id="footer">
+      <p>
+        &copy; <span id="year-range"></span> Created by Mosberg. All rights
+        reserved.
+      </p>
+
+      <script>
+        const startYear = 2025; // Change this to your project's starting year
+        const currentYear = new Date().getFullYear();
+        const yearText =
+          currentYear > startYear
+            ? `${startYear}–${currentYear}`
+            : `${startYear}`;
+        document.getElementById("year-range").textContent = yearText;
+      </script>
+    </footer>
+  </body>
+</html>
