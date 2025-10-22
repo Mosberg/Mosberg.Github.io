@@ -1,3 +1,12 @@
+/* Add any additional internal CSS styles here */
+:root {
+  font-family: "Fira Code", monospace;
+  box-sizing: border-box;
+
+  --primary-color: #4caf50;
+  --secondary-color: #ff9800;
+}
+
 body {
   margin: 0;
   padding: 0;
