@@ -1,109 +1,200 @@
 <!DOCTYPE html>
-
-<!-- Language of web page-->
 <html lang="en">
   <head>
-    <!-- Define the character set used -->
     <meta charset="UTF-8" />
-
-    <!-- Define the viewport for responsive design (Make your website look good on all devices)-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- Define a description of your web page -->
     <meta name="description" content="Perchance HTML5 Template" />
-
-    <!-- Define keywords for search engines -->
     <meta name="keywords" content="HTML5, Template, Perchance" />
-
-    <!-- Define the author of the web page -->
     <meta name="author" content="Mosberg" />
-
-    <!-- Browser's Title Bar -->
+    <meta name="theme-color" content="#4caf50" />
     <title>Perchance HTML5 Template</title>
 
-    <!-- External Resource (Favicon) -->
+    <!-- Favicon -->
     <link
-      rel="shortcut icon"
+      rel="icon"
       href="https://mosberg.github.io/images/mosberg-avatar-ico.ico"
       type="image/x-icon"
     />
 
-    <!-- External Resource (Lazy-load Fonts) -->
+    <!-- Lazy-load Fira Code font -->
     <link
       rel="preload"
-      href="https://fonts.googleapis.com/css?family=Fira+Code"
+      href="https://fonts.googleapis.com/css?family=Fira+Code&display=swap"
       as="style"
       onload="this.onload=null;this.rel='stylesheet'"
     />
     <noscript>
       <link
-        href="https://fonts.googleapis.com/css?family=Fira+Code"
         rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Fira+Code&display=swap"
       />
     </noscript>
 
-    <!-- External Resource (CSS Stylesheet) -->
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="https://mosberg.github.io/styles.css"
-    />
-
-    <!-- Internal Resource (CSS Styles) -->
+    <!-- Internal Styles -->
     <style>
-      /* Add any additional internal CSS styles here */
       :root {
-        font-family: "Fira Code", monospace;
-        box-sizing: border-box;
+        --font-family: "Fira Code", monospace;
 
-        --primary-color: #4caf50;
-        --secondary-color: #ff9800;
+        /* Background Palette */
+        --bg-neutral: #f5f7fa;
+        --bg-primary: #f94144;
+        --bg-secondary: #f3722c;
+        --bg-tertiary: #f8961e;
+        --bg-quaternary: #f9844a;
+        --bg-quinary: #f9c74f;
+        --bg-senary: #90be6d;
+        --bg-septenary: #43aa8b;
+        --bg-octonary: #4d908e;
+        --bg-nonary: #577590;
+        --bg-decenary: #277da1;
+        --bg-card: #ffffff;
+        --bg-dark: #1c1c1c;
+        --bg-gradient: linear-gradient(135deg, #5c6bc0, #3b4d7a);
+
+        /* Text */
+        --text-main: #1e1e1e;
+        --text-muted: #6c757d;
+        --text-light: #ffffff;
+        --text-inverse: #f5f7fa;
+
+        /* Links */
+        --link: #277da1;
+        --link-hover: #577590;
+
+        /* Accents */
+        --accent: #ffb74d;
+        --accent-hover: #ffa726;
+
+        /* Status */
+        --success: #4caf50;
+        --warning: #ff9800;
+        --error: #f44336;
+        --info: #2196f3;
+
+        /* Borders & Shadows */
+        --border: #222;
+        --border-style: solid;
+        --border-width: 2px;
+        --border-radius: 6px;
+        --shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+        --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      * {
+        box-sizing: border-box;
+        font-family: var(--font-family);
+      }
+
+      html {
+        background-color: var(--bg-neutral);
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        padding: 1rem;
+      }
+
+      header,
+      footer {
+        padding: 1rem;
+        text-align: center;
+        background-color: var(--bg-secondary);
+        color: var(--text-light);
+        border: var(--border) var(--border-style) var(--border-width);
+        border-radius: var(--border-radius);
+        box-shadow: var(--shadow);
+      }
+
+      nav {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        margin: 1rem 0;
+        padding: 1rem;
+        background-color: var(--bg-quaternary);
+        border: var(--border) var(--border-style) var(--border-width);
+        border-radius: var(--border-radius);
+        box-shadow: var(--shadow);
+      }
+
+      main,
+      section {
+        margin: 1rem 0;
+        padding: 1rem;
+        text-align: center;
+        background-color: var(--bg-tertiary);
+        color: var(--text-light);
+        border: var(--border) var(--border-style) var(--border-width);
+        border-radius: var(--border-radius);
+        box-shadow: var(--shadow);
+      }
+
+      button {
+        padding: 0.75rem 1.25rem;
+        font-size: 1rem;
+        color: var(--text-light);
+        background-color: var(--accent);
+        border: none;
+        border-radius: var(--border-radius);
+        cursor: pointer;
+        box-shadow: var(--shadow);
+        transition: transform 0.2s ease;
+        flex-grow: 1;
+      }
+
+      button:hover {
+        background-color: var(--accent-hover);
+        transform: scale(1.02);
+      }
+
+      button:focus {
+        background-color: var(--success);
+        outline: none;
       }
     </style>
   </head>
   <body>
-    <!-- Header (Title & Description) -->
-    <header id="header">
-      <!-- Title -->
+    <header role="banner">
       <h1>Perchance HTML5 Template</h1>
-
-      <!-- Description -->
       <p>Description Goes Here</p>
     </header>
 
-    <!-- Nav (Navigation Controls) -->
-    <nav id="navigation"></nav>
+    <nav role="navigation" aria-label="Main Navigation">
+      <button onclick="document.getElementById('mainContent').scrollIntoView()">
+        Main Content
+      </button>
+      <button
+        onclick="document.getElementById('sectionContent').scrollIntoView()"
+      >
+        Additional Section
+      </button>
+    </nav>
 
-    <!-- Main (Main Content) -->
-    <main id="mainContent">
-      <!-- All Main Content Goes Here -->
+    <main id="mainContent" role="main">
+      <h2>Welcome to my Perchance HTML5 Template</h2>
+      <p>This is a basic template structure for HTML5 projects.</p>
     </main>
 
-    <!-- Section (Section Content) -->
-    <section id="sectionContent">
-      <!-- All Section Content Goes Here -->
+    <section id="sectionContent" role="region" aria-label="Additional Content">
+      <h2>Additional Section</h2>
+      <p>This section can be used for extra content or features.</p>
     </section>
 
-    <!-- Footer (Copyright & Script to automatically update year) -->
-    <footer id="footer">
+    <footer role="contentinfo">
       <p>
-        &copy; <span id="year-range"></span> Created by
-        <a
-          href="https://github.com/Mosberg"
-          title="Visit Mosberg's Github Profile Page"
-          >Mosberg</a
-        >. All rights reserved.
+        &copy; <span id="year-range"></span> Created by Mosberg. All rights
+        reserved.
       </p>
-
-      <script>
-        const startYear = 2025; // Change this to your project's starting year
-        const currentYear = new Date().getFullYear();
-        const yearText =
-          currentYear > startYear
-            ? `${startYear}–${currentYear}`
-            : `${startYear}`;
-        document.getElementById("year-range").textContent = yearText;
-      </script>
     </footer>
+
+    <script defer>
+      const startYear = 2025;
+      const currentYear = new Date().getFullYear();
+      document.getElementById("year-range").textContent =
+        currentYear > startYear
+          ? `${startYear}–${currentYear}`
+          : `${startYear}`;
+    </script>
   </body>
 </html>
