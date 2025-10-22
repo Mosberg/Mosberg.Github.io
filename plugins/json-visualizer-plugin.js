@@ -1,4 +1,4 @@
-// json-visualizer.js
+// json-visualizer-plugin.js
 PerchancePlugin({
   id: "json-visualizer",
   name: "JSON Visualizer & Converter",
