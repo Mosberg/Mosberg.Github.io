@@ -1,0 +1,61 @@
+{
+  "generates": [
+    {
+      "id": "char-desc-gen",
+      "type": "generator",
+      "title": "Character Visual Description Creator",
+      "description": "Creates visual descriptions of characters based on detailed textual inputs.",
+      "tags": ["character", "visual", "description"],
+      "url": "https://perchance.org/character-visual-description-creator-and-generator-final"
+    },
+    {
+      "id": "char-profile-gen",
+      "type": "generator",
+      "title": "Character Profile Generator",
+      "description": "Generates detailed character profiles for use in stories, games, or role-playing scenarios.",
+      "tags": ["character", "profile"],
+      "url": "https://perchance.org/advanced-character-profile-generator"
+    }
+  ],
+
+  "plugins": [
+    {
+      "id": "example-plugin",
+      "type": "plugin",
+      "title": "Example Plugin",
+      "description": "A sample plugin for Perchance projects.",
+      "tags": ["example"],
+      "url": "https://perchance.org/example-plugin"
+    }
+  ],
+
+  "modules": [
+    {
+      "id": "example-module",
+      "type": "module",
+      "title": "Example Module",
+      "description": "A sample module for Perchance projects.",
+      "tags": ["example"],
+      "url": "https://perchance.org/example-module"
+    },
+    {
+      "id": "example-module-2",
+      "type": "module",
+      "title": "Example Module",
+      "description": "A sample module for Perchance projects.",
+      "tags": ["example"],
+      "url": "https://perchance.org/example-module"
+    }
+  ],
+
+  "templates": [
+    {
+      "id": "example-template",
+      "type": "template",
+      "title": "Example Template",
+      "description": "A sample template for Perchance projects.",
+      "tags": ["example"],
+      "url": "https://perchance.org/example-template"
+    }
+  ]
+}
