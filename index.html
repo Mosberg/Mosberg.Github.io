@@ -1,189 +1,128 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark" aria-label="Mosberg's Plugin Forge">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Perchance HTML5 Template" />
-    <meta name="keywords" content="HTML5, Template, Perchance" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1"
+    />
+    <meta
+      name="description"
+      content="A curated hub of generators, plugins, modules and templates for Perchance."
+    />
+    <meta
+      name="keywords"
+      content="Perchance, HTML5, CSS, JavaScript, Generators, Plugins, Modules, Templates"
+    />
     <meta name="author" content="Mosberg" />
-    <meta name="theme-color" content="#4caf50" />
-    <title>Perchance HTML5 Template</title>
-
-    <!-- Favicon -->
+    <meta name="theme-color" content="#1e1e2f" />
+    <title>Mosberg's Plugin Forge</title>
     <link
       rel="icon"
       href="https://mosberg.github.io/images/mosberg-avatar-ico.ico"
       type="image/x-icon"
     />
-
-    <!-- Lazy-load Fira Code font -->
     <link
       rel="preload"
       href="https://fonts.googleapis.com/css?family=Fira+Code&display=swap"
       as="style"
       onload="this.onload=null;this.rel='stylesheet'"
     />
-    <noscript>
-      <link
+    <noscript
+      ><link
         rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Fira+Code&display=swap"
-      />
-    </noscript>
-
-    <!-- Internal Styles -->
-    <style>
-      :root {
-        --font-family: "Fira Code", monospace;
-
-        /* Background Palette */
-        --bg-neutral: #f5f7fa;
-        --bg-primary: #f94144;
-        --bg-secondary: #f3722c;
-        --bg-tertiary: #f8961e;
-        --bg-quaternary: #f9844a;
-        --bg-quinary: #f9c74f;
-        --bg-senary: #90be6d;
-        --bg-septenary: #43aa8b;
-        --bg-octonary: #4d908e;
-        --bg-nonary: #577590;
-        --bg-decenary: #277da1;
-        --bg-card: #ffffff;
-        --bg-dark: #1c1c1c;
-        --bg-gradient: linear-gradient(135deg, #5c6bc0, #3b4d7a);
-
-        /* Text */
-        --text-main: #1e1e1e;
-        --text-muted: #6c757d;
-        --text-light: #ffffff;
-        --text-inverse: #f5f7fa;
-
-        /* Links */
-        --link: #277da1;
-        --link-hover: #577590;
-
-        /* Accents */
-        --accent: #ffb74d;
-        --accent-hover: #ffa726;
-
-        /* Status */
-        --success: #4caf50;
-        --warning: #ff9800;
-        --error: #f44336;
-        --info: #2196f3;
-
-        /* Borders & Shadows */
-        --border: #222;
-        --border-style: solid;
-        --border-width: 2px;
-        --border-radius: 6px;
-        --shadow: 0 0 10px rgba(0, 0, 0, 0.7);
-        --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.1);
-      }
-
-      * {
-        box-sizing: border-box;
-        font-family: var(--font-family);
-      }
-
-      html {
-        background-color: var(--bg-neutral);
-        scroll-behavior: smooth;
-      }
-
-      body {
-        margin: 0;
-        padding: 1rem;
-      }
-
-      header,
-      footer {
-        padding: 1rem;
-        text-align: center;
-        background-color: var(--bg-secondary);
-        color: var(--text-light);
-        border: var(--border) var(--border-style) var(--border-width);
-        border-radius: var(--border-radius);
-        box-shadow: var(--shadow);
-      }
-
-      nav {
-        display: flex;
-        justify-content: center;
-        gap: 1rem;
-        margin: 1rem 0;
-        padding: 1rem;
-        background-color: var(--bg-quaternary);
-        border: var(--border) var(--border-style) var(--border-width);
-        border-radius: var(--border-radius);
-        box-shadow: var(--shadow);
-      }
-
-      main,
-      section {
-        margin: 1rem 0;
-        padding: 1rem;
-        text-align: center;
-        background-color: var(--bg-tertiary);
-        color: var(--text-light);
-        border: var(--border) var(--border-style) var(--border-width);
-        border-radius: var(--border-radius);
-        box-shadow: var(--shadow);
-      }
-
-      button {
-        padding: 0.75rem 1.25rem;
-        font-size: 1rem;
-        color: var(--text-light);
-        background-color: var(--accent);
-        border: none;
-        border-radius: var(--border-radius);
-        cursor: pointer;
-        box-shadow: var(--shadow);
-        transition: transform 0.2s ease;
-        flex-grow: 1;
-      }
-
-      button:hover {
-        background-color: var(--accent-hover);
-        transform: scale(1.02);
-      }
-
-      button:focus {
-        background-color: var(--success);
-        outline: none;
-      }
-    </style>
+    /></noscript>
   </head>
+
   <body>
-    <header role="banner">
-      <h1>Perchance HTML5 Template</h1>
-      <p>Description Goes Here</p>
+    <header>
+      <h1>Mosberg's Plugin Forge</h1>
+      <p style="text-align: center">
+        A curated hub of generators, plugins and modules.
+      </p>
+      <form
+        aria-label="Theme Selector"
+        style="position: absolute; top: 10px; right: 10px"
+      >
+        <label for="theme-select">Theme:</label>
+        <select id="theme-select" name="theme" role="button">
+          <option value="dark">🌑 Dark</option>
+          <option value="light">🌕 Light</option>
+          <option value="retro">🕹️ Retro</option>
+          <option value="frost">❄️ Frost</option>
+          <option value="sunset">🌇 Sunset</option>
+          <option value="cosmic">🌌 Cosmic</option>
+          <option value="terminal">💻 Terminal</option>
+          <option value="forest">🌲 Forest</option>
+        </select>
+      </form>
     </header>
 
     <nav role="navigation" aria-label="Main Navigation">
-      <button onclick="document.getElementById('mainContent').scrollIntoView()">
-        Main Content
-      </button>
-      <button
-        onclick="document.getElementById('sectionContent').scrollIntoView()"
-      >
-        Additional Section
-      </button>
+      <ul id="nav-list">
+        <li><a href="#" onclick="showPage('sectionMain', this)">Home</a></li>
+        <li>
+          <a href="#" onclick="showPage('sectionGenerators', this)"
+            >Generators</a
+          >
+        </li>
+        <li>
+          <a href="#" onclick="showPage('sectionPlugins', this)">Plugins</a>
+        </li>
+        <li>
+          <a href="#" onclick="showPage('sectionModules', this)">Modules</a>
+        </li>
+        <li>
+          <a href="#" onclick="showPage('sectionTemplates', this)">Templates</a>
+        </li>
+      </ul>
     </nav>
 
-    <main id="mainContent" role="main">
-      <h2>Welcome to my Perchance HTML5 Template</h2>
-      <p>This is a basic template structure for HTML5 projects.</p>
-    </main>
-
-    <section id="sectionContent" role="region" aria-label="Additional Content">
-      <h2>Additional Section</h2>
-      <p>This section can be used for extra content or features.</p>
+    <section id="filterBar" style="text-align: center; margin-top: 1rem">
+      <input
+        type="text"
+        id="pluginFilter"
+        placeholder="Search plugins by keyword or tag..."
+        style="
+          padding: 10px;
+          width: 60%;
+          border-radius: 8px;
+          border: 2px solid var(--border-color);
+          background: var(--secondary-bg);
+          color: var(--primary-text);
+          font-family: var(--font-family);
+        "
+      />
     </section>
 
-    <footer role="contentinfo">
+    <main>
+      <section id="sectionMain" class="grid">
+        <div class="card">
+          <h2>Under Construction</h2>
+          <p>This page is under construction.</p>
+          <p>Please check back later for updates.</p>
+        </div>
+      </section>
+
+      <section
+        id="sectionGenerators"
+        class="grid"
+        style="display: none"
+      ></section>
+      <section id="sectionPlugins" class="grid" style="display: none"></section>
+      <section id="sectionModules" class="grid" style="display: none"></section>
+      <section
+        id="sectionTemplates"
+        class="grid"
+        style="display: none"
+      ></section>
+    </main>
+
+    <footer>
       <p>
-        &copy; <span id="year-range"></span> Created by Mosberg. All rights
+        &copy; <span id="year-range"></span>
+        <span class="creator-name">Created by Mosberg</span>. All rights
         reserved.
       </p>
     </footer>
@@ -195,6 +134,280 @@
         currentYear > startYear
           ? `${startYear}–${currentYear}`
           : `${startYear}`;
+
+      function showPage(pageId, link) {
+        const sections = [
+          "sectionMain",
+          "sectionGenerators",
+          "sectionPlugins",
+          "sectionModules",
+          "sectionTemplates",
+        ];
+        sections.forEach(
+          (id) => (document.getElementById(id).style.display = "none")
+        );
+        document.getElementById(pageId).style.display = "grid";
+        document
+          .querySelectorAll("#nav-list a")
+          .forEach((a) => a.removeAttribute("aria-current"));
+        if (link) link.setAttribute("aria-current", "page");
+      }
+
+      document.addEventListener("DOMContentLoaded", () => {
+        applyTheme(document.getElementById("theme-select").value || "dark");
+        showPage("sectionMain");
+        setupPluginFilter();
+        loadPluginsFromManifest(
+          "https://mosberg.github.io/plugin-manifest.json"
+        );
+      });
+
+      function applyTheme(theme) {
+        document.documentElement.setAttribute("data-theme", theme);
+        if (window.onThemeChange) window.onThemeChange(theme);
+      }
+
+      document
+        .getElementById("theme-select")
+        .addEventListener("change", (e) => applyTheme(e.target.value));
+      window.onThemeChange = (theme) =>
+        console.log(`Theme changed to: ${theme}`);
+
+      async function loadPluginsFromManifest(url) {
+        try {
+          const response = await fetch(url);
+          const manifest = await response.json();
+          const sectionMap = {
+            generates: "sectionGenerators",
+            plugins: "sectionPlugins",
+            modules: "sectionModules",
+            templates: "sectionTemplates",
+          };
+          Object.entries(sectionMap).forEach(([key, sectionId]) => {
+            const section = document.getElementById(sectionId);
+            const items = manifest[key] || [];
+            items.forEach((plugin) =>
+              section.appendChild(createPluginCard(plugin))
+            );
+          });
+        } catch (err) {
+          console.error("Failed to load plugin manifest:", err);
+        }
+      }
+
+      function createPluginCard(plugin) {
+        const card = document.createElement("div");
+        card.className = "card";
+        card.setAttribute("data-plugin-id", plugin.id);
+        card.setAttribute("data-plugin-type", plugin.type);
+        card.setAttribute(
+          "data-plugin-tags",
+          plugin.tags.join(",").toLowerCase()
+        );
+        card.innerHTML = `
+          <h2>${plugin.title}</h2>
+          <p>${plugin.description}</p>
+          <a href="${plugin.url}" target="_blank">View ${capitalize(
+          plugin.type
+        )} →</a>
+        `;
+        return card;
+      }
+
+      function capitalize(str) {
+        return str.charAt(0).toUpperCase() + str.slice(1);
+      }
+
+      function setupPluginFilter() {
+        const input = document.getElementById("pluginFilter");
+        input.addEventListener("input", () => {
+          const query = input.value.toLowerCase();
+          const cards = document.querySelectorAll(".card[data-plugin-id]");
+          cards.forEach((card) => {
+            const tags = card.getAttribute("data-plugin-tags");
+            const title = card.querySelector("h2").textContent.toLowerCase();
+            const desc = card.querySelector("p").textContent.toLowerCase();
+            const match =
+              tags.includes(query) ||
+              title.includes(query) ||
+              desc.includes(query);
+            card.style.display = match ? "block" : "none";
+          });
+        });
+      }
     </script>
+
+    <!-- Styles -->
+    <style>
+      :root {
+        --font-family: "Fira Code", monospace;
+      }
+      body {
+        font-family: var(--font-family);
+        background-color: var(--primary-bg, #1e1e2f);
+        color: var(--primary-text, #f0f0f0);
+        padding: 2rem;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      header,
+      footer {
+        text-align: center;
+      }
+      h1,
+      .card h2,
+      .creator-name {
+        color: var(--secondary-text, #ffcc00);
+        font-weight: bold;
+      }
+      ul {
+        display: flex;
+        justify-content: center;
+        list-style: none;
+        margin-top: 10px;
+        padding: 10px;
+        border-radius: 8px;
+      }
+      li a {
+        display: block;
+        margin: 0 10px;
+        padding: 10px;
+        background: var(--secondary-bg, #2a2a3d);
+        border: 2px solid var(--border-color, #ffcc00);
+        border-radius: 8px;
+        color: var(--secondary-text, #ffcc00);
+        text-decoration: none;
+        font-weight: bold;
+      }
+      li a:hover,
+      li a[aria-current="page"] {
+        background: var(--tertiary-bg, #757066);
+        outline: 2px solid var(--border-color, #ffcc00);
+        border-radius: 8px;
+        text-decoration: underline;
+      }
+
+      /* ──────────────── Cards ──────────────── */
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 1.5rem;
+        margin-top: 2rem;
+        text-align: center;
+      }
+
+      .card {
+        background: var(--secondary-bg, #2a2a3d);
+        border: 2px solid var(--border-color, #ffcc00);
+        border-radius: 8px;
+        padding: 1rem;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        font-weight: bold;
+        margin-bottom: 20px;
+      }
+
+      .card a {
+        display: inline-block;
+        margin-top: 0.5rem;
+        color: var(--secondary-text, #ffcc00);
+        text-decoration: none;
+      }
+
+      .card a:hover {
+        text-decoration: underline;
+      }
+
+      /* ──────────────── Theme Variables ──────────────── */
+      [data-theme="cosmic"] {
+        --primary-bg: #0d0d1a;
+        --secondary-bg: #1a1a2e;
+        --tertiary-bg: #2e2e3f;
+        --primary-text: #e0e0ff;
+        --secondary-text: #ff00cc;
+        --border-color: #9900ff;
+      }
+
+      [data-theme="dark"] {
+        --primary-bg: #1e1e2f;
+        --secondary-bg: #2a2a3d;
+        --tertiary-bg: #7a7a7d;
+        --primary-text: #f0f0f0;
+        --secondary-text: #ffcc00;
+        --border-color: #ffcc00;
+      }
+
+      [data-theme="forest"] {
+        --primary-bg: #263238;
+        --secondary-bg: #37474f;
+        --tertiary-bg: #455a64;
+        --primary-text: #cfd8dc;
+        --secondary-text: #a5d6a7;
+        --border-color: #66bb6a;
+      }
+
+      [data-theme="frost"] {
+        --primary-bg: #e0f7fa;
+        --secondary-bg: #b2ebf2;
+        --tertiary-bg: #80deea;
+        --primary-text: #004d40;
+        --secondary-text: #00796b;
+        --border-color: #00bcd4;
+      }
+
+      [data-theme="light"] {
+        --primary-bg: #ffffff;
+        --secondary-bg: #f0f0f0;
+        --tertiary-bg: #e0e0e0;
+        --primary-text: #1e1e2f;
+        --secondary-text: #007acc;
+        --border-color: #cccccc;
+      }
+
+      [data-theme="retro"] {
+        --primary-bg: #2b2b2b;
+        --secondary-bg: #3c3c3c;
+        --tertiary-bg: #1a1a1a;
+        --primary-text: #f8f8f2;
+        --secondary-text: #ffcc00;
+        --border-color: #ff00ff;
+      }
+
+      [data-theme="sunset"] {
+        --primary-bg: #ff6e40;
+        --secondary-bg: #ff8a65;
+        --tertiary-bg: #ffab91;
+        --primary-text: #3e2723;
+        --secondary-text: #bf360c;
+        --border-color: #bf360c;
+      }
+
+      [data-theme="terminal"] {
+        --primary-bg: #000000;
+        --secondary-bg: #1a1a1a;
+        --tertiary-bg: #333333;
+        --primary-text: #00ff00;
+        --secondary-text: #ffff00;
+        --border-color: #00ff00;
+      }
+
+      /* ──────────────── Responsive Enhancements ──────────────── */
+      @media (max-width: 600px) {
+        ul {
+          flex-direction: column;
+          padding: 0;
+        }
+
+        li a {
+          margin: 5px 0;
+          width: 100%;
+        }
+
+        form {
+          position: static;
+          margin-top: 1rem;
+          text-align: center;
+        }
+      }
+    </style>
   </body>
 </html>
