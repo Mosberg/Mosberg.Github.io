@@ -335,6 +335,10 @@ select:hover {
   transform: translate(-50%, -50%);
   inset-block-start: 50%;
   inset-inline-start: 50%;
+  border: 2px solid var(--accent-primary);
+  border-radius: 8px;
+  background: var(--bg-secondary);
+  padding: 1.5rem;
 }
 
 .spinner {
@@ -437,4 +441,41 @@ label {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
+}
+
+/* Accessibility: Focus styles */
+button:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid var(--accent-primary);
+  outline-offset: 2px;
+}
+
+/* Responsive layout for smaller screens */
+@media (max-width: 768px) {
+  header > div,
+  .theme-selector-inner,
+  main,
+  footer {
+    padding: 1rem;
+  }
+
+  .tab-btn-container {
+    flex-direction: column;
+  }
+
+  #previewFrame {
+    inline-size: 100%;
+    block-size: 400px;
+  }
+}
+
+/* Smooth transitions for modal */
+#previewModal {
+  transition: opacity 0.3s ease;
+}
+
+#previewModal[hidden] {
+  opacity: 0;
+  pointer-events: none;
 }
