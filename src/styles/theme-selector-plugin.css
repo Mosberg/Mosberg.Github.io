@@ -1,0 +1,70 @@
+.theme-selector {
+  display: inline-block;
+  margin: 1em;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: var(--second-border-color) var(--border-width) solid;
+  border-radius: var(--border-radius);
+  background-color: var(--second-bg-color);
+  padding: 1.5em;
+  color: var(--second-text-color);
+  font-family: var(--font-family);
+}
+
+.theme-selector label,
+.theme-selector select,
+.theme-selector button {
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+label {
+  margin-inline-end: 0.5em;
+  color: var(--second-text-color);
+  font-weight: bold;
+}
+
+select,
+button {
+  transition: background-color 0.2s ease, color 0.2s ease,
+    border-color 0.2s ease;
+  cursor: pointer;
+  margin-inline-end: 0.5em;
+  border: 1px solid var(--second-border-color);
+  border-radius: 4px;
+  background-color: var(--first-bg-color);
+  padding: 0.5em 1em;
+  color: var(--first-text-color);
+}
+
+select:hover,
+button:hover,
+select:focus,
+button:focus {
+  outline: none;
+  border-color: var(--accent-color);
+  background-color: var(--accent-color);
+  color: var(--first-button-text-color);
+}
+
+.theme-desc {
+  margin-block-start: 0.5em;
+  border: var(--second-border-color) var(--border-width) solid;
+  border-radius: var(--border-radius);
+  padding: 0.5em 1em;
+  color: var(--second-text-color);
+  font-weight: bold;
+  font-size: 1em;
+}
+
+#themeSelectorHeader {
+  margin-block-end: 1em;
+  color: var(--second-text-color);
+  text-align: center;
+}
+
+#themeSelectorFooter {
+  margin-block-start: 1em;
+  color: var(--third-text-color);
+  font-size: 0.9em;
+  text-align: center;
+}
