@@ -451,6 +451,18 @@ textarea:focus {
   outline-offset: 2px;
 }
 
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+.blink-cursor {
+  display: inline-block;
+  width: 1ch;
+  background-color: currentColor;
+  animation: blink 1s step-end infinite;
+}
+
 /* Responsive layout for smaller screens */
 @media (max-width: 768px) {
   header > div,
