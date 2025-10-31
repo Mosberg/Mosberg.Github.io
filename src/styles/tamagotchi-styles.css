@@ -1,0 +1,262 @@
+/* General Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primary-text-color: #6a11cb;
+  --secondary-text-color: #2575fc;
+  --tertiary-text-color: #f1f1f1;
+
+  --primary-bg-color: #6a11cb;
+  --secondary-bg-color: #2575fc;
+  --tertiary-bg-color: #f1f1f1;
+
+  --primary-border-color: #6a11cb;
+  --secondary-border-color: #2575fc;
+  --tertiary-border-color: #f1f1f1;
+
+  --hunger-bar-bg-color: #ff6b6b;
+  --happiness-bar-bg-color: #4ecdc4;
+  --energy-bar-bg-color: #ffe66d;
+  --hygiene-bar-bg-color: #1a535c;
+  --affection-bar-bg-color: #ff9f1c;
+  --curiosity-bar-bg-color: #6a0572;
+  --boredom-bar-bg-color: #5e60ce;
+
+  --feed-button-bg-color: #ff6b6b;
+  --play-button-bg-color: #4ecdc4;
+  --clean-button-bg-color: #1a535c;
+  --sleep-button-bg-color: #ffe66d;
+  --praise-button-bg-color: #ff9f1c;
+  --discipline-button-bg-color: #6a0572;
+
+  --feed-button-text-color: white;
+  --play-button-text-color: white;
+  --clean-button-text-color: white;
+  --sleep-button-text-color: #333;
+  --praise-button-text-color: white;
+  --discipline-button-text-color: white;
+}
+
+/* General Layout */
+#gameContainer {
+  display: flex;
+  flex-direction: column;
+  block-size: 100vh;
+  color: var(--primary-text-color);
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background: linear-gradient(
+    to right,
+    var(--primary-bg-color),
+    var(--secondary-bg-color)
+  );
+  padding: 5px;
+  color: var(--tertiary-text-color);
+  text-align: center;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  flex: 1;
+  gap: 20px;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+footer {
+  background: var(--sleep-button-text-color);
+  padding: 15px;
+  color: var(--tertiary-text-color);
+  text-align: center;
+}
+
+/* Pet Display & Needs */
+#petDisplay,
+#needsContainer,
+#actionsContainer,
+#chatContainer,
+#journalContainer {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+  background: var(--tertiary-bg-color);
+  padding: 20px;
+}
+
+#petDisplay {
+  text-align: center;
+}
+
+#petImage {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+  border-radius: 50%;
+  background: var(--tertiary-border-color);
+  inline-size: 200px;
+  block-size: 200px;
+  font-size: 80px;
+}
+
+#petStatus {
+  margin-block-start: 15px;
+  color: var(--primary-text-color);
+  font-weight: bold;
+}
+
+/* Need Meters */
+#needsContainer h3 {
+  margin-block-end: 10px;
+  color: var(--primary-text-color);
+}
+
+#needsContainer > div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-block-start: 15px;
+}
+
+#needsContainer span {
+  display: flex;
+  justify-content: space-between;
+  color: var(--secondary-text-color);
+}
+
+#needsContainer div > div {
+  margin-block-start: 5px;
+  border-radius: 5px;
+  background: var(--tertiary-border-color);
+  block-size: 10px;
+}
+
+#hungerBar {
+  background-color: var(--hunger-bar-bg-color);
+}
+#happinessBar {
+  background-color: var(--happiness-bar-bg-color);
+}
+#energyBar {
+  background-color: var(--energy-bar-bg-color);
+}
+#hygieneBar {
+  background-color: var(--hygiene-bar-bg-color);
+}
+#affectionBar {
+  background-color: var(--affection-bar-bg-color);
+}
+#curiosityBar {
+  background-color: var(--curiosity-bar-bg-color);
+}
+#boredomBar {
+  background-color: var(--boredom-bar-bg-color);
+}
+
+/* Buttons */
+button {
+  transition: transform 0.2s;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  font-weight: bold;
+}
+
+#feedBtn {
+  background: var(--feed-button-bg-color);
+  color: var(--feed-button-text-color);
+}
+#playBtn {
+  background: var(--play-button-bg-color);
+  color: var(--play-button-text-color);
+}
+#cleanBtn {
+  background: var(--clean-button-bg-color);
+  color: var(--clean-button-text-color);
+}
+#sleepBtn {
+  background: var(--sleep-button-bg-color);
+  color: var(--sleep-button-text-color);
+}
+#praiseBtn {
+  background: var(--praise-button-bg-color);
+  color: var(--praise-button-text-color);
+}
+#disciplineBtn {
+  background: var(--discipline-button-bg-color);
+  color: var(--discipline-button-text-color);
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+/* Chat */
+#chatOutput {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  margin: 10px 0;
+  border: 1px solid var(--tertiary-border-color);
+  border-radius: 8px;
+  background: var(--tertiary-bg-color);
+  padding: 15px;
+  overflow-y: auto;
+}
+
+.chatMessage {
+  margin: 5px 0;
+  border-radius: 18px;
+  padding: 8px 12px;
+  max-inline-size: 80%;
+  word-wrap: break-word;
+}
+
+.userMessage {
+  align-self: flex-end;
+  margin-inline-start: auto;
+  background-color: var(--secondary-bg-color);
+  color: var(--tertiary-text-color);
+}
+
+.petMessage {
+  align-self: flex-start;
+  background-color: var(--tertiary-bg-color);
+  color: var(--sleep-button-text-color);
+}
+
+/* Journal */
+#journalContent {
+  margin-block-start: 10px;
+  border: 1px solid var(--tertiary-border-color);
+  border-radius: 8px;
+  background: var(--tertiary-bg-color);
+  padding: 15px;
+  block-size: 150px;
+  overflow-y: auto;
+  color: var(--primary-text-color);
+  font-size: 14px;
+}
+
+.journalEntry {
+  border-block-end: 1px solid var(--tertiary-border-color);
+  padding: 5px 0;
+}
