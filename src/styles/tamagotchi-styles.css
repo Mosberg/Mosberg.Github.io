@@ -144,25 +144,25 @@ footer {
 }
 
 #hungerBar {
-  background-color: var(--hunger-bar-bg-color);
+  background: var(--hunger-bar-bg-color);
 }
 #happinessBar {
-  background-color: var(--happiness-bar-bg-color);
+  background: var(--happiness-bar-bg-color);
 }
 #energyBar {
-  background-color: var(--energy-bar-bg-color);
+  background: var(--energy-bar-bg-color);
 }
 #hygieneBar {
-  background-color: var(--hygiene-bar-bg-color);
+  background: var(--hygiene-bar-bg-color);
 }
 #affectionBar {
-  background-color: var(--affection-bar-bg-color);
+  background: var(--affection-bar-bg-color);
 }
 #curiosityBar {
-  background-color: var(--curiosity-bar-bg-color);
+  background: var(--curiosity-bar-bg-color);
 }
 #boredomBar {
-  background-color: var(--boredom-bar-bg-color);
+  background: var(--boredom-bar-bg-color);
 }
 
 /* Buttons */
