@@ -2,36 +2,148 @@
 🌐 Base Reset & Global Variables
 ================================= */
 
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+body {
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin: 0;
+  background-color: var(--first-bg-color, #ffffff);
+  padding: 0;
+  color: var(--first-text-color, #000000);
+  font-family: var(--font-family, system-ui);
+}
+
+/* Default Variables */
 :root {
-  /* All variables are defined externally as you provided */
+  --font-family: "Segoe UI", sans-serif;
+
+  /* Background Colors */
+  --first-bg-color: #ffffff;
+  --second-bg-color: #f2f2f2;
+  --third-bg-color: #e0e0e0;
+
+  /* Text Colors */
+  --first-text-color: #000000;
+  --second-text-color: #666666;
+  --third-text-color: #999999;
+
+  /* Border */
+  --first-border-color: #ccc;
+  --second-border-color: #ddd;
+  --third-border-color: #eee;
+  --border-width: 2px;
+  --border-radius: 8px;
+
+  /* Accent & Utility Colors */
+  --accent-color: #0465cc;
+  --link-color: #007bff;
+  --success-color: #28a745;
+  --info-color: #17a2b8;
+  --warning-color: #ffc107;
+  --danger-color: #dc3545;
+
+  --success-text-color: #ffffff;
+  --info-text-color: #ffffff;
+  --warning-text-color: #ffffff;
+  --danger-text-color: #ffffff;
+
+  --gradient: linear-gradient(to bottom, #007bff, #0069d9);
+  --gradient-reverse: linear-gradient(to top, #007bff, #0069d9);
+
+  /* Button Colors */
+  --first-button-color: #007bff;
+  --second-button-color: #6c757d;
+  --third-button-color: #28a745;
+
+  --first-button-text-color: #ffffff;
+  --second-button-text-color: #ffffff;
+  --third-button-text-color: #ffffff;
+
+  --first-button-hover-color: #0056b3;
+  --second-button-hover-color: #545b62;
+  --third-button-hover-color: #218838;
+
+  --first-button-hover-text-color: #ffffff;
+  --second-button-hover-text-color: #ffffff;
+  --third-button-hover-text-color: #ffffff;
+
+  --first-button-active-color: #004c98;
+  --second-button-active-color: #4a5158;
+  --third-button-active-color: #1e6f2e;
+
+  --first-button-active-text-color: #ffffff;
+  --second-button-active-text-color: #ffffff;
+  --third-button-active-text-color: #ffffff;
+
+  --first-button-disabled-color: #6c757d;
+  --second-button-disabled-color: #6c757d;
+  --third-button-disabled-color: #6c757d;
+
+  --first-button-disabled-text-color: #ffffff;
+  --second-button-disabled-text-color: #ffffff;
+  --third-button-disabled-text-color: #ffffff;
+
+  --first-button-border-color: #007bff;
+  --second-button-border-color: #6c757d;
+  --third-button-border-color: #28a745;
+
+  --first-button-hover-border-color: #0056b3;
+  --second-button-hover-border-color: #545b62;
+  --third-button-hover-border-color: #218838;
+
+  --first-button-active-border-color: #004c98;
+  --second-button-active-border-color: #4a5158;
+  --third-button-active-border-color: #1e6f2e;
+
+  --first-button-disabled-border-color: #6c757d;
+  --second-button-disabled-border-color: #6c757d;
+  --third-button-disabled-border-color: #6c757d;
+
+  --first-button-focus-border-color: #007bff;
+  --second-button-focus-border-color: #6c757d;
+  --third-button-focus-border-color: #28a745;
+
+  --first-button-focus-box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  --second-button-focus-box-shadow: 0 0 0 0.2rem rgba(108, 117, 125, 0.25);
+  --third-button-focus-box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
+
+  --first-button-focus-text-color: #ffffff;
+  --second-button-focus-text-color: #ffffff;
+  --third-button-focus-text-color: #ffffff;
+
+  --first-button-focus-bg-color: #007bff;
+  --second-button-focus-bg-color: #6c757d;
+  --third-button-focus-bg-color: #28a745;
+
+  --shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* ===============================
 🧩 Typography & Elements
 ================================= */
 
-body {
-  font-family: var(--font-family);
-  background-color: var(--first-bg-color);
-  color: var(--first-text-color);
-  transition: background-color 0.3s ease, color 0.3s ease;
-}
-
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   margin: 0.5em 0;
   font-weight: 600;
-  color: var(--first-text-color);
 }
 
 p {
   margin: 0.5em 0;
-  color: var(--second-text-color);
 }
 
 a {
@@ -43,15 +155,21 @@ a:hover {
   text-decoration: underline;
 }
 
+img {
+  display: block;
+  max-inline-size: 100%;
+  block-size: auto;
+}
+
 /* ===============================
 🧱 Layout Utilities
 ================================= */
 
 .container {
-  width: 100%;
-  max-width: 1200px;
   margin-inline: auto;
   padding-inline: 1rem;
+  inline-size: 100%;
+  max-inline-size: 1200px;
 }
 
 .flex {
@@ -65,24 +183,10 @@ a:hover {
 }
 
 .center {
+  display: flex;
   justify-content: center;
   align-items: center;
 }
-
-.text-center { text-align: center; }
-.text-left { text-align: left; }
-.text-right { text-align: right; }
-
-.mt-1 { margin-top: 0.5rem; }
-.mt-2 { margin-top: 1rem; }
-.mb-1 { margin-bottom: 0.5rem; }
-.mb-2 { margin-bottom: 1rem; }
-
-.p-1 { padding: 0.5rem; }
-.p-2 { padding: 1rem; }
-
-.rounded { border-radius: var(--border-radius); }
-.shadow { box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); }
 
 /* ===============================
 🎨 Component Styles
@@ -92,14 +196,14 @@ button,
 input,
 select,
 textarea {
-  font-family: inherit;
-  font-size: 1rem;
-  padding: 0.5em 1em;
-  border-radius: var(--border-radius);
-  border: var(--border-width) solid var(--first-border-color);
-  background-color: var(--first-bg-color);
-  color: var(--first-text-color);
   transition: all 0.2s ease;
+  border: 1px solid var(--first-border-color);
+  border-radius: var(--border-radius);
+  background-color: var(--first-bg-color);
+  padding: 0.5em 1em;
+  color: var(--first-text-color);
+  font-size: 1rem;
+  font-family: inherit;
 }
 
 button:hover,
@@ -107,8 +211,6 @@ input:hover,
 select:hover,
 textarea:hover {
   border-color: var(--accent-color);
-  background-color: var(--accent-color);
-  color: var(--first-button-text-color);
 }
 
 button:focus,
@@ -116,72 +218,68 @@ input:focus,
 select:focus,
 textarea:focus {
   outline: none;
-  box-shadow: var(--first-button-focus-box-shadow);
-  border-color: var(--first-button-focus-border-color);
-  background-color: var(--first-button-focus-bg-color);
-  color: var(--first-button-focus-text-color);
+  box-shadow: 0 0 0 2px rgba(4, 101, 204, 0.2);
+  border-color: var(--accent-color);
 }
 
 /* ===============================
-🎯 Status & Utility Colors
+✅ Utility Classes
 ================================= */
+
+.text-center {
+  text-align: center;
+}
+.text-left {
+  text-align: start;
+}
+.text-right {
+  text-align: end;
+}
+
+.mt-1 {
+  margin-block-start: 0.5rem;
+}
+.mt-2 {
+  margin-block-start: 1rem;
+}
+.mb-1 {
+  margin-block-end: 0.5rem;
+}
+.mb-2 {
+  margin-block-end: 1rem;
+}
+
+.p-1 {
+  padding: 0.5rem;
+}
+.p-2 {
+  padding: 1rem;
+}
+
+.rounded {
+  border-radius: var(--border-radius);
+}
+.shadow {
+  box-shadow: var(--shadow);
+}
 
 .bg-accent {
   background-color: var(--accent-color);
-  color: var(--first-button-text-color);
+  color: #fff;
 }
-
 .bg-success {
   background-color: var(--success-color);
-  color: var(--success-text-color);
+  color: #fff;
 }
-
-.bg-info {
-  background-color: var(--info-color);
-  color: var(--info-text-color);
-}
-
 .bg-warning {
   background-color: var(--warning-color);
-  color: var(--warning-text-color);
+  color: #000;
 }
-
 .bg-danger {
   background-color: var(--danger-color);
-  color: var(--danger-text-color);
+  color: #fff;
 }
-
-/* ===============================
-🧠 Button Variants
-================================= */
-
-.btn-primary {
-  background-color: var(--first-button-color);
-  color: var(--first-button-text-color);
-  border: var(--border-width) solid var(--first-button-border-color);
-}
-
-.btn-primary:hover {
-  background-color: var(--first-button-hover-color);
-  color: var(--first-button-hover-text-color);
-  border-color: var(--first-button-hover-border-color);
-}
-
-.btn-primary:active {
-  background-color: var(--first-button-active-color);
-  color: var(--first-button-active-text-color);
-  border-color: var(--first-button-active-border-color);
-}
-
-.btn-primary:disabled {
-  background-color: var(--first-button-disabled-color);
-  color: var(--first-button-disabled-text-color);
-  border-color: var(--first-button-disabled-border-color);
-}
-
-.btn-primary:focus {
-  background-color: var(--first-button-focus-bg-color);
-  color: var(--first-button-focus-text-color);
-  border-color: var(--first-button-focus-border-color);
-  box-shadow: var(--first-button-focus-box-shadow);
+.bg-info {
+  background-color: var(--info-color);
+  color: #fff;
 }
