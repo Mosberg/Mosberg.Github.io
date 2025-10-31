@@ -260,3 +260,43 @@ button:active {
   border-block-end: 1px solid var(--tertiary-border-color);
   padding: 5px 0;
 }
+
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal-content {
+  background-color: var(--tertiary-bg-color);
+  margin: 5% auto;
+  padding: 20px;
+  border-radius: 15px;
+  max-inline-size: 900px;
+  block-size: 90vh;
+  overflow-y: auto;
+  position: relative;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 28px;
+  font-weight: bold;
+  color: var(--primary-text-color);
+  cursor: pointer;
+}
+
+#openTamagotchiModal {
+  padding: 10px 20px;
+  background-color: var(--primary-bg-color);
+  color: var(--tertiary-text-color);
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+}
