@@ -1,4 +1,6 @@
-/* General Reset */
+/* ===========================
+   Global Reset & Variables
+=========================== */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -6,42 +8,45 @@
 }
 
 :root {
+  /* Text Colors */
   --primary-text-color: #6a11cb;
   --secondary-text-color: #2575fc;
   --tertiary-text-color: #f1f1f1;
 
+  /* Background Colors */
   --primary-bg-color: #6a11cb;
   --secondary-bg-color: #2575fc;
   --tertiary-bg-color: #f1f1f1;
 
+  /* Border Colors */
   --primary-border-color: #6a11cb;
   --secondary-border-color: #2575fc;
   --tertiary-border-color: #f1f1f1;
 
-  --hunger-bar-bg-color: #ff6b6b;
-  --happiness-bar-bg-color: #4ecdc4;
-  --energy-bar-bg-color: #ffe66d;
-  --hygiene-bar-bg-color: #1a535c;
-  --affection-bar-bg-color: #ff9f1c;
-  --curiosity-bar-bg-color: #6a0572;
-  --boredom-bar-bg-color: #5e60ce;
+  /* Need Bar Colors */
+  --hunger-bar-bg: #ff6b6b;
+  --happiness-bar-bg: #4ecdc4;
+  --energy-bar-bg: #ffe66d;
+  --hygiene-bar-bg: #1a535c;
+  --affection-bar-bg: #ff9f1c;
+  --curiosity-bar-bg: #6a0572;
+  --boredom-bar-bg: #5e60ce;
 
-  --feed-button-bg-color: #ff6b6b;
-  --play-button-bg-color: #4ecdc4;
-  --clean-button-bg-color: #1a535c;
-  --sleep-button-bg-color: #ffe66d;
-  --praise-button-bg-color: #ff9f1c;
-  --discipline-button-bg-color: #6a0572;
+  /* Button Backgrounds */
+  --feed-button-bg: #ff6b6b;
+  --play-button-bg: #4ecdc4;
+  --clean-button-bg: #1a535c;
+  --sleep-button-bg: #ffe66d;
+  --praise-button-bg: #ff9f1c;
+  --discipline-button-bg: #6a0572;
 
-  --feed-button-text-color: white;
-  --play-button-text-color: white;
-  --clean-button-text-color: white;
-  --sleep-button-text-color: #333;
-  --praise-button-text-color: white;
-  --discipline-button-text-color: white;
+  /* Button Text Colors */
+  --button-text-color: #ffffff;
 }
 
-/* General Layout */
+/* ===========================
+   Layout Containers
+=========================== */
 #gameContainer {
   display: flex;
   flex-direction: column;
@@ -50,15 +55,24 @@
   font-family: Arial, sans-serif;
 }
 
+header,
+footer {
+  padding: 15px;
+  color: var(--tertiary-text-color);
+  text-align: center;
+}
+
 header {
   background: linear-gradient(
     to right,
     var(--primary-bg-color),
     var(--secondary-bg-color)
   );
-  padding: 5px;
-  color: var(--tertiary-text-color);
-  text-align: center;
+  padding-block: 5px;
+}
+
+footer {
+  background: var(--sleep-button-bg);
 }
 
 main {
@@ -76,14 +90,9 @@ section {
   gap: 20px;
 }
 
-footer {
-  background: var(--sleep-button-text-color);
-  padding: 15px;
-  color: var(--tertiary-text-color);
-  text-align: center;
-}
-
-/* Pet Display & Needs */
+/* ===========================
+   Card Containers
+=========================== */
 #petDisplay,
 #needsContainer,
 #actionsContainer,
@@ -95,6 +104,9 @@ footer {
   padding: 20px;
 }
 
+/* ===========================
+   Pet Display
+=========================== */
 #petDisplay {
   text-align: center;
 }
@@ -113,14 +125,14 @@ footer {
 
 #petStatus {
   margin-block-start: 15px;
-  color: var(--primary-text-color);
   font-weight: bold;
 }
 
-/* Need Meters */
+/* ===========================
+   Needs Meters
+=========================== */
 #needsContainer h3 {
   margin-block-end: 10px;
-  color: var(--primary-text-color);
 }
 
 #needsContainer > div {
@@ -143,29 +155,32 @@ footer {
   block-size: 10px;
 }
 
+/* Individual Bars */
 #hungerBar {
-  background: var(--hunger-bar-bg-color);
+  background: var(--hunger-bar-bg);
 }
 #happinessBar {
-  background: var(--happiness-bar-bg-color);
+  background: var(--happiness-bar-bg);
 }
 #energyBar {
-  background: var(--energy-bar-bg-color);
+  background: var(--energy-bar-bg);
 }
 #hygieneBar {
-  background: var(--hygiene-bar-bg-color);
+  background: var(--hygiene-bar-bg);
 }
 #affectionBar {
-  background: var(--affection-bar-bg-color);
+  background: var(--affection-bar-bg);
 }
 #curiosityBar {
-  background: var(--curiosity-bar-bg-color);
+  background: var(--curiosity-bar-bg);
 }
 #boredomBar {
-  background: var(--boredom-bar-bg-color);
+  background: var(--boredom-bar-bg);
 }
 
-/* Buttons */
+/* ===========================
+   Buttons
+=========================== */
 button {
   transition: transform 0.2s;
   cursor: pointer;
@@ -173,31 +188,6 @@ button {
   border-radius: 8px;
   padding: 12px;
   font-weight: bold;
-}
-
-#feedBtn {
-  background: var(--feed-button-bg-color);
-  color: var(--feed-button-text-color);
-}
-#playBtn {
-  background: var(--play-button-bg-color);
-  color: var(--play-button-text-color);
-}
-#cleanBtn {
-  background: var(--clean-button-bg-color);
-  color: var(--clean-button-text-color);
-}
-#sleepBtn {
-  background: var(--sleep-button-bg-color);
-  color: var(--sleep-button-text-color);
-}
-#praiseBtn {
-  background: var(--praise-button-bg-color);
-  color: var(--praise-button-text-color);
-}
-#disciplineBtn {
-  background: var(--discipline-button-bg-color);
-  color: var(--discipline-button-text-color);
 }
 
 button:hover {
@@ -209,7 +199,35 @@ button:active {
   transform: translateY(0);
 }
 
-/* Chat */
+/* Action Buttons */
+#feedBtn {
+  background: var(--feed-button-bg);
+  color: var(--button-text-color);
+}
+#playBtn {
+  background: var(--play-button-bg);
+  color: var(--button-text-color);
+}
+#cleanBtn {
+  background: var(--clean-button-bg);
+  color: var(--button-text-color);
+}
+#sleepBtn {
+  background: var(--sleep-button-bg);
+  color: var(--button-text-color);
+}
+#praiseBtn {
+  background: var(--praise-button-bg);
+  color: var(--button-text-color);
+}
+#disciplineBtn {
+  background: var(--discipline-button-bg);
+  color: var(--button-text-color);
+}
+
+/* ===========================
+   Chat Interface
+=========================== */
 #chatOutput {
   display: flex;
   flex: 1;
@@ -233,17 +251,19 @@ button:active {
 .userMessage {
   align-self: flex-end;
   margin-inline-start: auto;
-  background-color: var(--secondary-bg-color);
+  background: var(--secondary-bg-color);
   color: var(--tertiary-text-color);
 }
 
 .petMessage {
   align-self: flex-start;
-  background-color: var(--tertiary-bg-color);
-  color: var(--sleep-button-text-color);
+  background: var(--tertiary-bg-color);
+  color: var(--sleep-button-bg);
 }
 
-/* Journal */
+/* ===========================
+   Journal
+=========================== */
 #journalContent {
   margin-block-start: 10px;
   border: 1px solid var(--tertiary-border-color);
@@ -261,42 +281,44 @@ button:active {
   padding: 5px 0;
 }
 
-/* Modal Styles */
+/* ===========================
+   Modal
+=========================== */
 .modal {
   display: none;
   position: fixed;
   z-index: 9999;
   inset: 0;
-  background-color: rgba(0, 0, 0, 0.6);
+  background: rgba(0, 0, 0, 0.6);
 }
 
 .modal-content {
-  background-color: var(--tertiary-bg-color);
+  position: relative;
   margin: 5% auto;
-  padding: 20px;
   border-radius: 15px;
+  background: var(--tertiary-bg-color);
+  padding: 20px;
   max-inline-size: 900px;
   block-size: 90vh;
   overflow-y: auto;
-  position: relative;
 }
 
 .close-button {
   position: absolute;
-  top: 10px;
-  right: 15px;
-  font-size: 28px;
-  font-weight: bold;
-  color: var(--primary-text-color);
   cursor: pointer;
+  inset-block-start: 10px;
+  inset-inline-end: 15px;
+  color: var(--primary-text-color);
+  font-weight: bold;
+  font-size: 28px;
 }
 
 #openTamagotchiModal {
-  padding: 10px 20px;
-  background-color: var(--primary-bg-color);
-  color: var(--tertiary-text-color);
+  cursor: pointer;
   border: none;
   border-radius: 8px;
+  background: var(--primary-bg-color);
+  padding: 10px 20px;
+  color: var(--tertiary-text-color);
   font-weight: bold;
-  cursor: pointer;
 }
