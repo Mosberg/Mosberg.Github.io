@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Mosberg's Github.io" />
+    <meta name="keywords" content="github" />
+    <meta name="author" content="Mosberg" />
+    <meta name="theme-color" content="#2962ff" />
+    <title>Mosberg.github.io</title>
+    <link
+      rel="icon"
+      href="https://mosberg.github.io/src/images/favicon.webp"
+      type="image/x-icon"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://mosberg.github.io/src/styles/style.css"
+    />
+  </head>
+
+  <body>
+    <header>
+      <h1>Mosberg's Github.io'</h1>
+      <p id="visitCounter"></p>
+      <nav aria-label="Theme selector">
+        <select id="themeSelectEl">
+          <option value="light">☀️ Light</option>
+          <option value="dark">🌑 Dark</option>
+          <option value="retro">🕹️ Retro</option>
+          <option value="cosmic">🌌 Cosmic</option>
+          <option value="sunset">🌇 Sunset</option>
+          <option value="earth">🌍 Earth</option>
+          <option value="ocean">🌊 Ocean</option>
+          <option value="solarized">🔆 Solarized</option>
+        </select>
+      </nav>
+    </header>
+
+    <nav>
+      <!-- Nav for dynamically loaded content here -->
+    </nav>
+
+    <main>
+      <!-- Content will dynamically be loaded here -->
+    </main>
+
+    <footer>
+      <p>&copy; <span id="year"></span> Mosberg. All rights reserved.</p>
+    </footer>
+
+    <script
+      src="https://mosberg.github.io/src/scripts/visit_counter.js"
+      defer
+    ></script>
+    <script
+      src="https://mosberg.github.io/src/scripts/theme_selector.js"
+      defer
+    ></script>
+    <script
+      src="https://mosberg.github.io/src/scripts/dynamic_year.js"
+      defer
+    ></script>
+  </body>
+</html>
