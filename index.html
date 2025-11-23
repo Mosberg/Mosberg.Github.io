@@ -7,7 +7,27 @@
     <meta name="keywords" content="github" />
     <meta name="author" content="Mosberg" />
     <meta name="theme-color" content="#2962ff" />
+
+    <!-- SEO and Social Meta Tags -->
+    <meta name="robots" content="index, follow" />
+    <meta property="og:title" content="Mosberg.github.io" />
+    <meta property="og:description" content="Mosberg's Github.io Page" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://mosberg.github.io/" />
+    <meta
+      property="og:image"
+      content="https://mosberg.github.io/src/images/favicon.webp"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Mosberg.github.io" />
+    <meta name="twitter:description" content="Mosberg's Github.io Page" />
+    <meta
+      name="twitter:image"
+      content="https://mosberg.github.io/src/images/favicon.webp"
+    />
+
     <title>Mosberg.github.io</title>
+
     <link
       rel="icon"
       href="https://mosberg.github.io/src/images/favicon.webp"
@@ -21,6 +41,22 @@
   </head>
 
   <body>
+    <!-- Skip link for keyboard users -->
+    <a
+      href="#mainContent"
+      class="skip-link"
+      style="
+        position: absolute;
+        left: -9999px;
+        top: auto;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+      "
+    >
+      Skip to main content
+    </a>
+
     <header>
       <h1>Mosberg's Github.io Page</h1>
       <p id="visitCounter"></p>
@@ -38,15 +74,15 @@
       </nav>
     </header>
 
-    <nav>
+    <nav role="navigation" aria-label="Primary navigation">
       <!-- Nav for dynamically loaded content here -->
     </nav>
 
-    <main>
+    <main id="mainContent" role="main">
       <!-- Content will dynamically be loaded here -->
     </main>
 
-    <footer>
+    <footer role="contentinfo">
       <p>&copy; <span id="year"></span> Mosberg. All rights reserved.</p>
     </footer>
 
@@ -64,4 +100,3 @@
     ></script>
   </body>
 </html>
-
