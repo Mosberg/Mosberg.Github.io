@@ -18,12 +18,23 @@ body {
   min-block-size: 100vh;
 }
 
-header,
+header {
+  background: var(--bg-secondary);
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+/* Footer */
 footer {
   background: var(--bg-secondary);
   padding: 1rem 2rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   text-align: center;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
 }
 
 main {
@@ -85,13 +96,6 @@ button:focus {
   color: #fff;
   font-size: 0.9rem;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  font-size: 0.85rem;
-  color: var(--text-secondary);
 }
 
 /* Themes */
@@ -158,4 +162,3 @@ footer {
   --text-secondary: #93a1a1;
   --accent-primary: #b58900;
 }
-
